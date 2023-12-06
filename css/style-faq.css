@@ -1,0 +1,336 @@
+* {
+  box-sizing: border-box;
+}
+html {
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: linear-gradient(0.25turn, #4a4e69, #b0c4b1);
+    /* color: aliceblue; */
+    width: 100%;
+    margin: auto;
+}
+
+body {
+    display: flexbox;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+    padding: auto;
+    background: #adb5bd;
+    border: 2px solid white;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+h1 {
+  margin: 20px 0 20px;
+  text-align: center;
+}
+
+p {
+  font-size: large;
+  color: #000000;
+}
+
+.faq-container {
+  max-width: 90%;
+  margin: auto;
+}
+
+.faq {
+  border: 1px solid black;
+  color: black;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+  background-color: #dedbd2;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.faq.active {
+  /* background-color: #f7e1d7; */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+
+  background-color: #f7e1d7;
+  border: 1px solid black;
+  border-radius: 10px;
+  color: black;
+  /* box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1); */
+}
+
+.faq.active::before,
+.faq.active::after {
+  content: '\f075';
+  font-family: 'Font Awesome 5 Free';
+  color: #2ecc71;
+  font-size: 7rem;
+  position: absolute;
+  opacity: 0.1;
+  top: 20px;
+  left: 20px;
+  z-index: 0;
+}
+
+.faq.active::before {
+  color: #3498db;
+  top: -10px;
+  left: -30px;
+  transform: rotateY(180deg);
+}
+
+.faq-title {
+  margin: 0 35px 0 0;
+}
+
+.faq-text {
+  display: none;
+  color: #000000;
+  margin: 30px 0 0;
+}
+
+.faq.active .faq-text {
+  display: block;
+}
+
+.faq-toggle {
+  background-color: transparent;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  padding: 0;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 30px;
+  width: 30px;
+}
+
+.faq-toggle:focus {
+  outline: 0;
+}
+
+.faq-toggle .fa-times {
+  display: none;
+}
+
+.faq.active .faq-toggle .fa-times {
+  color: black;
+  display: block;
+}
+
+.faq.active .faq-toggle .fa-chevron-down {
+  display: none;
+}
+
+.faq.active .faq-toggle {
+  background-color: #9fa4a8;
+}
+
+
+#container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    /* The image used */
+    background-image: url('../assets/photo.jpg');
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+    
+}
+
+nav {
+    position: sticky;
+    background-color: #4a5759;
+    border-bottom: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    margin: 0px;
+    padding: 5px;
+    z-index: 1;
+}
+
+footer {
+    position: sticky;
+    background-color: #4a5759;
+    border-top: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    margin: 0px;
+    padding: 5px;
+    top: 0;
+}
+
+.navbar-area,
+.footer-area {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.navbar-area, .footer-area {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+}
+
+.navbar a {
+    margin: 10px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 10px;
+    font-weight: 500;
+}
+footer a {
+    margin-right: 10px;
+    font-size: 13px;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 2px 10px;
+    font-weight: 500;
+}
+.logo a {
+   font-size: 20px;
+   text-decoration: none;
+   color:gold;
+   font-weight: 500;
+}
+.active {
+    color: gold !important;
+}
+.navbar a:hover {
+    color: gold;
+
+}  
+
+#right {
+    border: 1px solid black;
+    background-color: #b0c4b1;
+    border-radius: 10px;
+    color: black;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+    width: 60%;
+    margin: 20px;
+    padding: 20px 20px 20px 20px;
+  }
+#left {
+    border: 1px solid black;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+    background-color: #dedbd2;
+    border-radius: 10px;
+    color: black;
+    width: 40%;
+    margin: 20px;
+    padding: 20px 20px 20px 20px;
+}
+
+#map {
+    border: 1px solid white;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+    height: 700px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+#weather-container {
+    border: 1px solid black;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.5);
+    background-color: #dedbd2;
+    color: black;
+    margin: 10px 0px 10px 0px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#search-container {
+    border: 1px solid black;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.5);
+    background-color: #dedbd2;
+    color: black;
+    margin: 10px 10px 10px 0px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+li {
+    list-style-type: none;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 5px;
+}
+
+tr:nth-child(even) {
+    background-color: #f7e1d7;
+}
+
+input {
+    font-weight: 900;
+    padding: 10px;
+    width: 200px;
+    background-color: #f7e1d7;;
+    color:black;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);    
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+h2, h3 {
+    color: #000000;
+    padding-left: 10px;
+    text-align: center;
+}
+
+/* button {
+    padding: 10px;
+    margin: 5px 5px;
+    background-color: #4a5759;
+    color:whitesmoke;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);    
+    border: 2px solid black;
+    border-radius: 10px;
+}
+button:hover {
+    background-color:#6a736a;
+} */
+
+/* Media query for tablet and mobile responsiveness */
+@media only screen and (max-width: 973px) {
+    #container {
+        flex-direction: column; 
+    }
+
+    #left {
+      width: 70%; 
+    }
+    #right {
+        width: 100%; 
+    }
+}

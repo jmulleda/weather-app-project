@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In or Register | Weather App </title>
+    <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-app-compat.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-auth-compat.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script> 
+
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style-index.css">
+
+</head>
+<body>
+    <main>
+        <nav>
+            <div class="navbar-area">
+                <div class="logo">
+                    <a href="#">Weather App on a Map</a>
+                </div>
+                <div class="navbar">
+                    <div class="navbar">
+                        <a class="active" href="./faq.html">FAQs</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div id="container">
+            <div class="video-container">
+                <video autoplay muted loop>
+                    <source src="./assets/bg-video-clouds.mp4" type="video/mp4" />
+                </video>
+                <div class="transparent">
+                    <div id="form">
+                        <h2>Sign In or Register</h2>
+                        <div id="form-control">
+                            <label for="email">Username:</label>
+                            <input label="email login" id="email-login" type=text placeholder="Type email address"> 
+                        </div>
+    
+                        <div id="form-control">
+                            <label for="password">Password:</label>
+                            <input label="password" id="password-login" type=password placeholder="Type password"> 
+                        </div>
+                        <button onclick="signIn()">Sign In</button>
+                        <button onclick="createLogin()">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-area">
+                   <a class="active" href="#">&copy; 2023 Jonathan Mulleda | All Rights Reserved</a>
+            </div>
+        </footer>
+        <script src="./script/script-index.js"></script>
+    </main>
+</body>
+</html>

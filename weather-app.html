@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App on a Map</title>
+    <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-app-compat.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-auth-compat.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script> 
+   
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style-weather-app.css">
+
+</head>
+<body>
+    <main>
+        <nav>
+            <div class="navbar-area">
+                <div class="logo">
+                    <a href="#">Weather App</a>
+                </div>
+                <div class="navbar">
+                    <div class="navbar">
+                        <a class="active" href="./faq.html">FAQs</a>
+                        <!-- <a href="#">Signed in as: <span id="user"></span></a> -->
+                        <a href="#" onclick="checkIfLoggedIn(); return false;">Sign Out</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div id="container">
+            <div id="left">
+                <h2>Welcome to Weather App on a Map!</h2><hr><br> 
+                <h3>Click any location on the map or search by city name to view its weather.</h3><br>
+                <div id="search-container">
+                <h3>Enter Your Location</h3><br>
+                    <input id="city" type="text" placeholder="City Name">
+                    <button id="searchWeather">Search Weather</button>
+                    <!-- <button onclick="clearData()">Clear</button> -->
+                </div><br>
+                <div id="weather-container">
+                    <div id="weatherDataDisplay">
+                    </div>
+                </div>
+            </div>
+            <div id="right">
+                <div id="map"></div>               
+            </div>
+        </div>      
+        <footer>
+            <div class="footer-area">
+                    <a class="active" href="#">&copy; 2023 Jonathan Mulleda | All Rights Reserved</a>
+            </div>
+        </footer>
+        <script src="./script/script-weather-app.js"></script>
+    </main>
+</body>
+</html>
