@@ -7,6 +7,8 @@
  messagingSenderId: "917587784166",
  appId: "1:917587784166:web:bf54ea74d6e8b82eee6627"
  };
+
+// What were going to focus on in the new year is writing code that hides these API keys from the public.
     
  // Initialize Firebase
  firebase.initializeApp(firebaseConfig);
@@ -72,3 +74,5 @@ function createLogin(){
     });
 
 }
+
+// good functional code
