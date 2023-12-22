@@ -5,3 +5,5 @@ function loadWeatherApp() {
 }
 
 window.onload = loadWeatherApp(); 
+
+// well done
