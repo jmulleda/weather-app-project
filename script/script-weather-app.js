@@ -238,3 +238,5 @@ function signOut(){
     // An error happened.
     });
 }
+
+// great work, this is awesome, I'd challenge you to start thinking about whether these functions could written in a Object Oriented Way and what the benefit would be
